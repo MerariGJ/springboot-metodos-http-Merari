@@ -1,0 +1,16 @@
+Preguntas de reflexión
+1.	¿Qué significa el código 201 Created y cuándo se usa?
+Que la solicitud se procesó correctamente y se creó un nuevo recurso en el servidor.
+Se usa cuando:
+•	El cliente envía datos mediante POST
+•	El servidor los recibe y crea algo nuevo: un registro, un mensaje, un objeto, etc.
+•	El servidor confirma que la creación fue exitosa
+•	Recibimos datos y se debe genera un “mensaje creado”.
+2.	¿Qué sucede si se omite el Content-Type correcto en una solicitud?
+Aparece. Error 415 Unsupported Media Type, cuando spring no sabe en qué formato vienen los datos y esto sucede cuando spring no puede convertir el JSON al objeto Java (DTO) y la solicitud se rechaza porque no entiende el tipo de contenido enviado.
+3.	¿Por qué es importante validar los datos antes de procesar un POST?
+Porque:
+a)	Evita guardar información incompleta o incorrecta
+b)	Protege al servidor de errores
+c)	Mejora la seguridad
+d)	Asegura que la API cumpla reglas y estructura
